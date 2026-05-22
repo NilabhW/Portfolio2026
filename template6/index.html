@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Portfolio.</a>
+            <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section-reveal">
+        <div class="container">
+            <p class="greeting">Hello, world! I am</p>
+            <h1 class="hero-title">Alex Rivers</h1>
+            <p class="hero-subtitle">Professional Photographer & Visual Artist</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-reveal">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am a passionate Photographer focused on capturing authentic moments and stunning landscapes. I
+                    enjoy
+                    creating visual stories that resonate with people and highlight the beauty of the world.</p>
+                <p>When I'm not behind the lens, you can usually find me hiking new trails, exploring vintage cameras,
+                    or experimenting with different lighting setups to
+                    improve my craft.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills bg-light section-reveal">
+        <div class="container">
+            <h2 class="section-title">Equipment & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Portrait Photography</div>
+                <div class="skill-card">Landscape Photography</div>
+                <div class="skill-card">Photo Editing</div>
+                <div class="skill-card">Adobe Lightroom</div>
+                <div class="skill-card">Adobe Photoshop</div>
+                <div class="skill-card">Drone Photography</div>
+                <div class="skill-card">Studio Lighting</div>
+                <div class="skill-card">Visual Composition</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-reveal">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="flowers.png" alt="Spring Blooms">
+                    <div class="project-content">
+                        <h3>Spring Blooms</h3>
+                        <p>A tranquil scene of white flowers surrounding a vintage book, capturing the essence of spring
+                            and quiet reading moments.</p>
+                        <div class="project-tags">
+                            <span>Nature</span>
+                            <span>Still Life</span>
+                            <span>Natural Light</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="airplane.png" alt="Sunset Flight">
+                    <div class="project-content">
+                        <h3>Sunset Flight</h3>
+                        <p>A breathtaking view from an airplane window during sunset, showcasing the vibrant colors of
+                            the sky above the clouds.</p>
+                        <div class="project-tags">
+                            <span>Travel</span>
+                            <span>Landscape</span>
+                            <span>Aerial</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="cassette.png" alt="Golden Hour Cassette">
+                    <div class="project-content">
+                        <h3>Golden Hour Cassette</h3>
+                        <p>A retro transparent cassette tape bathed in warm, golden hour sunlight, evoking a strong
+                            sense of nostalgia.</p>
+                        <div class="project-tags">
+                            <span>Vintage</span>
+                            <span>Product</span>
+                            <span>Golden Hour</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="chess.png" alt="Strategic Moves">
+                    <div class="project-content">
+                        <h3>Strategic Moves</h3>
+                        <p>A dramatic, low-key lighting shot of a wooden chess set, emphasizing the texture and
+                            strategic depth of the game.</p>
+                        <div class="project-tags">
+                            <span>Studio</span>
+                            <span>Macro</span>
+                            <span>Low-key</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact bg-light section-reveal">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">Currently open for new opportunities and collaborations. Feel free to reach out!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Alex Rivers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
