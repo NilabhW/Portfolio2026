@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan — Designer & Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Alex Morgan — UI/UX design, branding, web development and creative digital experiences.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-text">AM.</div>
+    <div class="loader-bar"></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="#" class="nav-logo">AM.</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-content">
+        <div class="hero-tag"><span class="dot"></span> Available for Projects</div>
+        <h1>I Design & Build<br><span class="gradient">Digital Experiences</span></h1>
+        <p>A multidisciplinary designer and developer crafting thoughtful, pixel-perfect interfaces and brand identities that connect with people.</p>
+        <div class="hero-btns">
+            <a href="#work" class="btn-primary">
+                View My Work
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-glass">Get In Touch</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        Scroll
+        <span class="line"></span>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Passion Meets <span class="gradient">Precision</span></h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+        <div class="about-text reveal">
+            <h3>Hey, I'm <span class="gradient">Alex Morgan</span></h3>
+            <p>I'm a design student and aspiring creative technologist with a deep passion for the intersection of aesthetics and functionality. My work spans UI/UX design, brand identity, and frontend development.</p>
+            <p>I believe great design isn't just about how things look — it's about how they make people feel. Every project I take on is driven by empathy, attention to detail, and a desire to create meaningful digital experiences.</p>
+            <div class="about-stats">
+                <div class="stat glass">
+                    <span class="stat-num">15+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat glass">
+                    <span class="stat-num">3+</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat glass">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Tools</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-visual reveal">
+            <div class="about-img-wrap">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face" alt="Alex Morgan — Designer & Developer" loading="lazy">
+            </div>
+            <div class="about-badge">✦ Creative Thinker</div>
+        </div>
+    </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+    <div class="section-header reveal">
+        <span class="section-label">Selected Work</span>
+        <h2 class="section-title">Projects & <span class="gradient">Case Studies</span></h2>
+        <div class="section-line"></div>
+        <p class="section-desc">A curated collection of design and development projects that showcase my skills and creative process.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="graphic">Graphic</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+        <div class="project-card reveal" data-category="uiux">
+            <img src="project_uiux_app_1777353620448.png" alt="FitPulse — Fitness App UI" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">UI/UX Design</span>
+                <h3>FitPulse — Fitness App</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-category="branding">
+            <img src="project_branding_1777353647141.png" alt="Aurora Design Co — Brand Identity" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">Branding</span>
+                <h3>Aurora Design Co — Identity</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-category="web">
+            <img src="project_webdesign_1777353669497.png" alt="Apex Creative — Agency Website" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">Web Design</span>
+                <h3>Apex Creative — Agency Site</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-category="uiux">
+            <img src="project_dashboard_1777353710792.png" alt="GIA Hub — Analytics Dashboard" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">UI/UX Design</span>
+                <h3>GIA Hub — Dashboard</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-category="graphic">
+            <img src="project_poster_1777353734784.png" alt="Typography Poster Series" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">Graphic Design</span>
+                <h3>Typography Poster Series</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-category="branding">
+            <img src="project_packaging_1777353758697.png" alt="Lumière Botanica — Packaging" loading="lazy">
+            <div class="project-overlay">
+                <span class="tag">Branding / Packaging</span>
+                <h3>Lumière Botanica — Packaging</h3>
+                <div class="view-btn">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="section-header reveal">
+        <span class="section-label">Skillset</span>
+        <h2 class="section-title">Tools & <span class="gradient">Technologies</span></h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-card glass reveal">
+            <div class="skill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h4>Design Tools</h4>
+            <ul>
+                <li>Figma</li><li>Adobe XD</li><li>Photoshop</li><li>Illustrator</li><li>After Effects</li>
+            </ul>
+        </div>
+        <div class="skill-card glass reveal">
+            <div class="skill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h4>Frontend Dev</h4>
+            <ul>
+                <li>HTML/CSS</li><li>JavaScript</li><li>React</li><li>Next.js</li><li>Tailwind</li>
+            </ul>
+        </div>
+        <div class="skill-card glass reveal">
+            <div class="skill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h4>UI/UX Design</h4>
+            <ul>
+                <li>Wireframing</li><li>Prototyping</li><li>User Research</li><li>Design Systems</li>
+            </ul>
+        </div>
+        <div class="skill-card glass reveal">
+            <div class="skill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h4>Other Tools</h4>
+            <ul>
+                <li>Git/GitHub</li><li>Notion</li><li>Framer</li><li>Blender</li><li>Spline</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+    <div class="marquee-track">
+        <span>UI DESIGN</span><span>•</span><span><em>BRANDING</em></span><span>•</span>
+        <span>PROTOTYPING</span><span>•</span><span><em>FRONTEND DEV</em></span><span>•</span>
+        <span>CREATIVE CODE</span><span>•</span><span><em>MOTION</em></span><span>•</span>
+        <span>UI DESIGN</span><span>•</span><span><em>BRANDING</em></span><span>•</span>
+        <span>PROTOTYPING</span><span>•</span><span><em>FRONTEND DEV</em></span><span>•</span>
+        <span>CREATIVE CODE</span><span>•</span><span><em>MOTION</em></span><span>•</span>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="contact-wrap reveal">
+        <p>I'm always excited to collaborate on interesting projects, discuss design ideas, or just say hello. Feel free to reach out through any of the channels below.</p>
+        <div class="contact-links">
+            <a href="mailto:hello@alexmorgan.design" class="contact-link glass">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email
+            </a>
+            <a href="#" class="contact-link glass">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+            </a>
+            <a href="#" class="contact-link glass">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+            </a>
+            <a href="#" class="contact-link glass">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+                Dribbble
+            </a>
+        </div>
+        <form class="contact-form glass" style="padding:32px;" onsubmit="event.preventDefault();">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-copy">© 2026 <a href="#">Alex Morgan</a>. Crafted with precision.</div>
+    <a href="#hero" class="footer-top">
+        Back to Top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </a>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img src="" alt="" id="lightboxImg">
+    <div class="lightbox-info">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxTag"></p>
+    </div>
+</div>
+
+<script>
+/* ── LOADER ── */
+window.addEventListener('load',()=>{
+    setTimeout(()=>document.getElementById('loader').classList.add('hidden'),1400);
+});
+
+/* ── CURSOR ── */
+(()=>{
+    const c=document.getElementById('cursor');
+    if(matchMedia('(pointer:coarse)').matches)return;
+    let mx=0,my=0,cx=0,cy=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+    function loop(){cx+=(mx-cx)*.12;cy+=(my-cy)*.12;c.style.left=cx-6+'px';c.style.top=cy-6+'px';requestAnimationFrame(loop)}
+    loop();
+    document.querySelectorAll('a,button,.project-card,.filter-btn').forEach(el=>{
+        el.addEventListener('mouseenter',()=>c.classList.add('active'));
+        el.addEventListener('mouseleave',()=>c.classList.remove('active'));
+    });
+})();
+
+/* ── NAV SCROLL ── */
+(()=>{
+    const nav=document.getElementById('navbar');
+    let last=0;
+    window.addEventListener('scroll',()=>{
+        const y=window.scrollY;
+        nav.classList.toggle('nav-hidden',y>last&&y>80);
+        last=y;
+    },{passive:true});
+    /* active link */
+    const sections=document.querySelectorAll('section[id]');
+    const links=document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll',()=>{
+        let cur='';
+        sections.forEach(s=>{if(scrollY>=s.offsetTop-200)cur=s.id});
+        links.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+cur)});
+    },{passive:true});
+})();
+
+/* ── MOBILE MENU ── */
+(()=>{
+    const btn=document.getElementById('menuBtn');
+    const menu=document.getElementById('mobileMenu');
+    btn.addEventListener('click',()=>{
+        btn.classList.toggle('open');
+        menu.classList.toggle('active');
+        document.body.style.overflow=menu.classList.contains('active')?'hidden':'';
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        btn.classList.remove('open');
+        menu.classList.remove('active');
+        document.body.style.overflow='';
+    }));
+})();
+
+/* ── SCROLL REVEAL ── */
+(()=>{
+    const obs=new IntersectionObserver((entries)=>{
+        entries.forEach((e,i)=>{
+            if(e.isIntersecting){
+                setTimeout(()=>e.target.classList.add('visible'),i*80);
+                obs.unobserve(e.target);
+            }
+        });
+    },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+})();
+
+/* ── PROJECT FILTERS ── */
+(()=>{
+    const btns=document.querySelectorAll('.filter-btn');
+    const cards=document.querySelectorAll('.project-card');
+    btns.forEach(btn=>btn.addEventListener('click',()=>{
+        btns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f=btn.dataset.filter;
+        cards.forEach(c=>{
+            const show=f==='all'||c.dataset.category===f;
+            c.classList.toggle('filter-hidden',!show);
+            if(show){c.style.opacity='0';c.style.transform='translateY(20px)';
+                setTimeout(()=>{c.style.opacity='1';c.style.transform='translateY(0)'},50);
+            }
+        });
+    }));
+})();
+
+/* ── LIGHTBOX ── */
+(()=>{
+    const lb=document.getElementById('lightbox');
+    const lbImg=document.getElementById('lightboxImg');
+    const lbTitle=document.getElementById('lightboxTitle');
+    const lbTag=document.getElementById('lightboxTag');
+    const lbClose=document.getElementById('lightboxClose');
+    document.querySelectorAll('.project-card').forEach(card=>{
+        card.addEventListener('click',()=>{
+            lbImg.src=card.querySelector('img').src;
+            lbTitle.textContent=card.querySelector('h3').textContent;
+            lbTag.textContent=card.querySelector('.tag').textContent;
+            lb.classList.add('active');
+            document.body.style.overflow='hidden';
+        });
+    });
+    function closeLb(){lb.classList.remove('active');document.body.style.overflow=''}
+    lbClose.addEventListener('click',closeLb);
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+})();
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+        e.preventDefault();
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+});
+</script>
+
+</body>
+</html>

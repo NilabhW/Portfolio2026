@@ -1,0 +1,254 @@
+/*
+ * CardStack.css — Styles for the scroll-driven stacking card section
+ * -------------------------------------------------------------------
+ * 7 cards stacked Finder-style. Each card starts offscreen (translateY 100vh)
+ * and slides up on scroll. Previous cards scale down and shift up slightly,
+ * leaving their top border visible beneath the current card.
+ *
+ * Background: lighter navy blue.
+ * Card colours: dark purple → white → leaf green → pink → deep red → sage green → off-white.
+ */
+
+/* Outer scroll container — extra tall to provide scroll runway for 7 cards */
+.card-stack {
+  position: relative;
+  height: 500vh;
+  background: #EAE8E3;
+}
+
+/* Sticky viewport that holds the visible card pile */
+.card-stack__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+/* ---------- Cutting-mat backdrop ---------- */
+/* Dark grid panel that sits between the navy bg and the cards.
+   Grid lines are drawn entirely with repeating-linear-gradient — no images. */
+.card-stack__mat {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  border-radius: 20px;
+  z-index: 0;
+
+  /* Base colour — slightly lighter than pure dark for depth */
+  background-color: #2a2a2a;
+
+  /* Repeating grid lines — thin subtle strokes like a cutting mat */
+  background-image:
+    /* Vertical lines */
+    repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 80px),
+    /* Horizontal lines */
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 80px);
+
+  /* Subtle inner shadow for recessed feel */
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4),
+    0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* "My Work" heading — pinned to top-centre of the mat */
+.card-stack__mat-heading {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Individual card wrapper — positioned absolutely so cards stack */
+.card-stack__card {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  max-width: 960px;
+  border-radius: 24px;
+  overflow: hidden;
+  /* Smoother transition — longer duration + ease-in-out curve */
+  transition: transform 0.35s var(--ease-smooth),
+    opacity 0.35s var(--ease-smooth);
+  will-change: transform, opacity;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25),
+    0 2px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Card inner content area — editable per-card later */
+.card-stack__card-inner {
+  width: 100%;
+  height: 100%;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  position: relative;
+}
+
+/* Card background image placeholder */
+.card-stack__card-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  border: none;
+  opacity: 0.15;
+  font-size: 1rem;
+  color: var(--color-dark);
+  border: 2px dashed var(--color-dark);
+}
+
+/* Card number badge */
+.card-stack__card-number {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 900;
+  opacity: 0.08;
+  line-height: 1;
+  color: var(--color-dark);
+}
+
+/* Card title */
+.card-stack__card-title {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  position: relative;
+  z-index: 1;
+}
+
+/* Card description */
+.card-stack__card-desc {
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(26, 26, 26, 0.7);
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Card accent colours ---------- */
+/* 1: Dark purple */
+.card-stack__card--0 {
+  background: var(--color-card-dark-purple);
+}
+
+.card-stack__card--0 .card-stack__card-title,
+.card-stack__card--0 .card-stack__card-number {
+  color: var(--color-white);
+}
+
+.card-stack__card--0 .card-stack__card-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-stack__card--0 .card-stack__card-bg {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 2: White */
+.card-stack__card--1 {
+  background: var(--color-white);
+}
+
+/* 3: Leaf green */
+.card-stack__card--2 {
+  background: var(--color-card-leaf-green);
+}
+
+.card-stack__card--2 .card-stack__card-title,
+.card-stack__card--2 .card-stack__card-number {
+  color: var(--color-dark);
+}
+
+.card-stack__card--2 .card-stack__card-desc {
+  color: rgba(26, 26, 26, 0.75);
+}
+
+/* 4: Pink */
+.card-stack__card--3 {
+  background: var(--color-card-pink);
+}
+
+/* 5: Deep red */
+.card-stack__card--4 {
+  background: var(--color-card-deep-red);
+}
+
+.card-stack__card--4 .card-stack__card-title,
+.card-stack__card--4 .card-stack__card-number {
+  color: var(--color-white);
+}
+
+.card-stack__card--4 .card-stack__card-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-stack__card--4 .card-stack__card-bg {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 6: Sage green */
+.card-stack__card--5 {
+  background: var(--color-card-sage-green);
+}
+
+/* 7: Soft lavender (complementary cap) */
+.card-stack__card--6 {
+  background: var(--color-pink-lavender);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .card-stack__card {
+    width: 88vw;
+    height: 65vh;
+    border-radius: 20px;
+  }
+
+  .card-stack__card-inner {
+    padding: var(--space-lg);
+  }
+
+  .card-stack__card-title {
+    font-size: 1.35rem;
+  }
+
+  .card-stack__card-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-stack__card {
+    width: 92vw;
+    height: 60vh;
+    border-radius: 16px;
+  }
+}
